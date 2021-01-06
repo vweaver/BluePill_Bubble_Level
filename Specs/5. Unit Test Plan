@@ -1,0 +1,11 @@
+1. IMU Test Suite
+ 1.1 Verify setup values written correctly
+ 1.2 Verify accelometer data for each axis
+     ranges between +-16384 
+ 1.3 Verify scaling
+
+2. Oled Test Suite 
+ 2.1 Verify correct movement of bubble
+ 2.2 Verify correct clamping at edges
+
+

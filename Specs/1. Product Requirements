@@ -1,0 +1,5 @@
+PR1. The unit shall display a shape on the screen 
+PR2. The shape is to move in the direction of the lowest corner
+     as per the IMU, creating a virtual level.
+
+

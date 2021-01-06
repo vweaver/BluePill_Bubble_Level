@@ -1,0 +1,21 @@
+1. IMU
+Properties
+ current orientation
+ 
+Methods
+ Setup
+ Get IMU data
+ Scale data
+
+
+2. Bubble 
+Properties
+ int8 Radius
+ int8 XPos
+ int8 YPos
+
+Methods
+ clamp inputs
+ Update position
+
+
