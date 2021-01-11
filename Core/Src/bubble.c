@@ -32,7 +32,7 @@ void Bubble_ctor(Bubble * const me, int8_t X, int8_t Y, int8_t Radius)
   * @param dY: distance to move in the Y direction
   * @retval None
   */
-void moveBubble(Bubble * const me, int8_t dX, int8_t dY)
+void Bubble_moveby(Bubble * const me, int8_t dX, int8_t dY)
 {
 	// Erase the current bubble
 	GraphicsFilledCircle(me->XPos, me->YPos, me->Radius, false);

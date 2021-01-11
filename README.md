@@ -7,3 +7,4 @@ This project was created primarily to explore using the STM32CubeIDE in lieu of 
 ## Setup
 Import the project into the CubeIDE and compile. A test circuit schematic is included.
 
+

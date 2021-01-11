@@ -32,6 +32,13 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+#define BUBBLE_RADIUS 	10
+
+// These accel values are correct for FULL_SCALE_2k
+#define ACCEL_MIN 		-16384
+#define ACCEL_MAX 		 16384
+#define MOVE_MIN		-20
+#define MOVE_MAX		 20
 
 /* USER CODE END PTD */
 
@@ -113,7 +120,7 @@ int main(void)
 
   // create the bubble
   Bubble bubble;
-  Bubble_ctor(&bubble, 64, 32, 10);
+  Bubble_ctor(&bubble, OLED_CENTER_X, OLED_CENTER_Y, BUBBLE_RADIUS);
 
   /* USER CODE END 2 */
 
@@ -125,11 +132,11 @@ int main(void)
 	  MPU6050Read(&myIMU);
 
 	  // Map it to a move distance
-	  Vx = (int8_t)map_i16(myIMU.Ax, -16384, 16384, -20, 20);
-	  Vy = (int8_t)map_i16(myIMU.Ay, -16384, 16384, -20, 20);
+	  Vx = (int8_t)map_i16(myIMU.Ax, ACCEL_MIN, ACCEL_MAX, MOVE_MIN, MOVE_MAX);
+	  Vy = (int8_t)map_i16(myIMU.Ay, ACCEL_MIN, ACCEL_MAX, MOVE_MIN, MOVE_MAX);
 
 	  // Update the position of the bubble
-	  moveBubble(&bubble, -Vy, -Vx);
+	  Bubble_moveby(&bubble, -Vy, -Vx);
 
 	  HAL_Delay(10);
 

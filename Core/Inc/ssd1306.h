@@ -7,8 +7,10 @@
 typedef bool colour_t;
 
 // define these for your display
-#define SSD1306_OLED_HEIGHT          64U
-#define SSD1306_OLED_WIDTH           128U
+#define SSD1306_OLED_HEIGHT			64U
+#define SSD1306_OLED_WIDTH			128U
+#define OLED_CENTER_Y				32U
+#define OLED_CENTER_X				64U
 //#define SSD1306_MIRROR_VERTICAL
 //#define SSD1306_MIRROR_HORIZONTAL
 //#define SSD1306_INVERT_COLOUR
