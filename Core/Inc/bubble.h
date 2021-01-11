@@ -18,6 +18,6 @@ typedef struct Bubble {
 } Bubble;
 
 void Bubble_ctor(Bubble * const me, int8_t X, int8_t Y, int8_t Radius);
-void moveBubble(Bubble * const me, int8_t dX, int8_t dY);
+void Bubble_moveby(Bubble * const me, int8_t dX, int8_t dY);
 
 #endif /* INC_BUBBLE_H_ */
